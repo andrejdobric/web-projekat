@@ -1,0 +1,83 @@
+[
+      {
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "genre": ["Drama"],
+        "director": "Frank Darabont",
+        "actors": ["Tim Robbins", "Morgan Freeman"],
+        "rating": 9.3
+      },
+      {
+        "title": "The Godfather",
+        "year": 1972,
+        "genre": ["Crime", "Drama"],
+        "director": "Francis Ford Coppola",
+        "actors": ["Marlon Brando", "Al Pacino", "James Caan"],
+        "rating": 9.2
+      },
+      {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "genre": ["Action", "Crime", "Drama"],
+        "director": "Christopher Nolan",
+        "actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+        "rating": 9.0
+      },
+      {
+        "title": "Schindler's List",
+        "year": 1993,
+        "genre": ["Biography", "Drama", "History"],
+        "director": "Steven Spielberg",
+        "actors": ["Liam Neeson", "Ben Kingsley", "Ralph Fiennes"],
+        "rating": 8.9
+      },
+      {
+        "title": "The Lord of the Rings: The Return of the King",
+        "year": 2003,
+        "genre": ["Action", "Adventure", "Drama"],
+        "director": "Peter Jackson",
+        "actors": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
+        "rating": 8.9
+      },
+      {
+        "title": "Pulp Fiction",
+        "year": 1994,
+        "genre": ["Crime", "Drama"],
+        "director": "Quentin Tarantino",
+        "actors": ["John Travolta", "Samuel L. Jackson", "Uma Thurman"],
+        "rating": 8.9
+      },
+      {
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "genre": ["Western"],
+        "director": "Sergio Leone",
+        "actors": ["Clint Eastwood", "Lee Van Cleef", "Eli Wallach"],
+        "rating": 8.8
+      },
+      {
+        "title": "Forrest Gump",
+        "year": 1994,
+        "genre": ["Drama", "Romance"],
+        "director": "Robert Zemeckis",
+        "actors": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+        "rating": 8.8
+      },
+      {
+        "title": "Inception",
+        "year": 2010,
+        "genre": ["Action", "Adventure", "Sci-Fi"],
+        "director": "Christopher Nolan",
+        "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+        "rating": 8.7
+      },
+      {
+        "title": "The Matrix",
+        "year": 1999,
+        "genre": ["Action", "Sci-Fi"],
+        "director": "The Wachowskis",
+        "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+        "rating": 8.7
+      }
+]
+  
