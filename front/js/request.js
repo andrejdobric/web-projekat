@@ -29,7 +29,7 @@ function GetMovies(){
             for (var i in response){
                 var genreString = '';
                 for(var a in response[i].genre) {
-                    genreString += `<button class="tag-button" onclick="GetMoviesGenreFilter(${response[i].genre[a]})">${response[i].genre[a]}</button>`;
+                    genreString += `<button class="tag-button" onclick="GetMoviesGenreFilter('${response[i].genre[a]}')">${response[i].genre[a]}</button>`;
                 }
                 $("#parent").append(`<div class="movie${(i%3+1)}" id=${response[i].id}> <h2 class="title">${response[i].title} (${response[i].year})</h2> <p class="description">${response[i].director}</p> <p class="description">${response[i].actors.join(", ")}</p> <div class="genre-tags">${genreString}</div></div>`);
             }
@@ -42,7 +42,7 @@ function GetMoviesSearch(){
     var searchTerm = document.getElementById("search-input").value;
     
     $.ajax({
-        url: `${uri}/movies/search/q=${searchTerm}`,
+        url: `${uri}/movies/search/?q=${searchTerm}`,
         type: 'GET',
         success: function(response){
             parent = document.getElementById("parent");
@@ -52,7 +52,7 @@ function GetMoviesSearch(){
             for (var i in response){
                 var genreString = '';
                 for(var a in response[i].genre) {
-                    genreString += `<button class="tag-button" onclick="GetMoviesGenreFilter(${response[i].genre[a]})">${response[i].genre[a]}</button>`;
+                    genreString += `<button class="tag-button" onclick="GetMoviesGenreFilter('${response[i].genre[a]}')">${response[i].genre[a]}</button>`;
                 }
                 $("#parent").append(`<div class="movie${(i%3+1)}" id=${response[i].id}> <h2 class="title">${response[i].title} (${response[i].year})</h2> <p class="description">${response[i].director}</p> <p class="description">${response[i].actors.join(", ")}</p> <div class="genre-tags">${genreString}</div></div>`);
             }
@@ -73,7 +73,7 @@ function GetMoviesGenreFilter(genre){
             for (var i in response){
                 var genreString = '';
                 for(var a in response[i].genre) {
-                    genreString += '<button class="tag-button">' + response[i].genre[a] + '</button>';
+                    genreString += `<button class="tag-button" onclick="GetMoviesGenreFilter('${response[i].genre[a]}')">${response[i].genre[a]}</button>`;
                 }
                 $("#parent").append(`<div class="movie${(i%3+1)}" id=${response[i].id}> <h2 class="title">${response[i].title} (${response[i].year})</h2> <p class="description">${response[i].director}</p> <p class="description">${response[i].actors.join(", ")}</p> <div class="genre-tags">${genreString}</div></div>`);
             }
