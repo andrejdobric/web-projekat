@@ -141,6 +141,14 @@ body {
 	transform: scale(1.1);
 }
 
+.delete-movie {
+	cursor: pointer;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -340,6 +348,69 @@ body {
   }
   
   
+
+  #post-modal-wrap{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+	/* display: flex; */
+	display: none;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .post-modal{
+	background-color: rgb(32, 32, 32);
+	padding: 0 0 20px 0;
+	width: 450px;
+	text-align: center;
+  }
+  
+  .post-top-form{
+	display: flex;
+	justify-content: flex-end;
+  }
+  
+  .post-top-form .post-close-modal{
+	cursor: pointer;
+	padding: 0 5px;
+	font-size: 20px;
+	background-color: #ffe054;
+  }
+  
+  .post-form h2{
+	letter-spacing: 2px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: #ffe054;
+  }
+  
+  .post-form form input{
+	width: 75%;
+	margin-bottom: 20px;
+	padding: 12px 12px;
+	box-sizing: border-box;
+	border: 1px solid white;
+	color:white;
+	border-radius: 3px;
+  }
+  
+  .post-form form button{
+	padding: 12px 0px;
+	width: 75%;
+	background-color: #ffe054;
+	border: 0;
+	border-radius: 3px;
+	color: rgb(32, 32, 32);
+	margin: 10px auto;
+	cursor: pointer;
+  }
+  
+
 /*--------------------------------------------------------------
 ## Buttons
 --------------------------------------------------------------*/
@@ -353,6 +424,17 @@ body {
 	height: 40px;
 }
 
+
+.plus-icon{
+	cursor: pointer;
+	position:absolute;
+	right:90%;
+}
+
+.plus-icon img {
+	width: 40px;
+	height: 40px;
+}
 
 
 

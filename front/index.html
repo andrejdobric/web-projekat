@@ -22,6 +22,11 @@
 				<div class="profile-icon" id="login-open-button">
 					<img src="icons/icon-profile.png">
 				</div>
+
+				<div class="plus-icon" id="post-button">
+					<img src="icons/icon-plus.png">
+				</div>
+
 				<h2 class="header-bioskop">BIOSKOP</h2>
 
 
@@ -44,9 +49,15 @@
 		
 		<main class="main">
 			<div class="wrap-content" id="parent">
-				<div class="movie1">
-				
+				<div class="movie1" id="1231">
+					<div class="delete-movie">
+						✖
 					</div>
+					<h2 class="title">${response[i].title} (${response[i].year})</h2>
+					<p class="description">${response[i].director}</p>
+					<p class="description">${response[i].actors.join(", ")}</p>
+					<div class="genre-tags">${genreString}</div>
+				</div>
 				</div>
 			</div>
 		</main>
@@ -67,18 +78,52 @@
 				  <button type="button" class="submit-button">Login</button>
 				</form>
 			  </div>
+			</div>
+		</div>
+
+		<div id="post-modal-wrap">
+			<div class="post-modal">
+				<div class="post-top-form">
+				<div class="post-close-modal">
+					✖
+				</div>
+				</div>
+				<div class="post-form">
+				<h2>New Movie</h2>
+					<form action="#">
+						<input class="form-control" type="text" placeholder="Title" id="title-input">
+						<input class="form-control" type="number" placeholder="Year" id="year-input">
+						<input class="form-control" type="text" placeholder="Director" id="director-input">
+						<input class="form-control" type="text" placeholder="Actors" id="actor-input">
+						<input class="form-control" type="text" placeholder="Genre" id="genre-input">
+						<input class="form-control" type="text" placeholder="Rating" id="rating-input">
+						<button type="button" class="post-submit-button">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
 
 	</div>
+
 
 
 	<script>
 		const search_icon = document.getElementById('search-icon');
 		const search = document.getElementById('search');
+
 		const modal = document.getElementById('login-modal');
 		const login_open_button = document.getElementById('login-open-button');
 		const closeModal = document.querySelector('.close-modal');
 		const login_submit_button = document.querySelector('.submit-button');
+
+		const post_modal = document.getElementById('post-modal-wrap');
+		const post_open = document.getElementById('post-button');
+		const close_post = document.querySelector('.post-close-modal');
+		const post_submit_button = document.querySelector('.post-submit-button')
 			
+		const delete_movie = document.querySelector('.delete-movie');
+
 		search_icon.onclick = function(){
 			search.classList.toggle('active');
 		}
@@ -97,6 +142,33 @@
 
 			PostLogin(username, password);
 			modal.style.display = 'none';
+		}
+
+		delete_movie.onclick = function(e){
+			DeleteMovie(e.target.parentNode.id);
+		}
+
+
+		post_open.onclick = function(){
+			post_modal.style.display = 'flex';
+		}
+
+		post_submit_button.onclick = function(){
+			var title = document.getElementById('title-input').value;
+			var director = document.getElementById('director-input').value;
+			var actor = document.getElementById('actor-input').value.split(",");
+			var genre = document.getElementById('genre-input').value.split(",");
+			var year = document.getElementById('year-input').value;
+			var rating = document.getElementById('rating-input').value;
+
+			var Movie = {'title':title, 'year':year, 'genre':genre, 'actor':actor, 'rating':rating}
+
+			PostMovie(Movie);
+			post_modal.style.display = 'none';
+		}
+
+		close_post.onclick = function(){
+			post_modal.style.display = 'none';
 		}
 
 	</script>
